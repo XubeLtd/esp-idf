@@ -1480,7 +1480,7 @@ esp_err_t i2c_master_cmd_begin(i2c_port_t i2c_num, i2c_cmd_handle_t cmd_handle, 
         if (wait_time > ticks_to_wait) { // out of time
             wait_time = 0;
         } else {
-            wait_time = ticks_to_wait
+            wait_time = ticks_to_wait;
         }
         // In master mode, since we don't have an interrupt to detective bus error or FSM state, what we do here is to make
         // sure the interrupt mechanism for master mode is still working.
